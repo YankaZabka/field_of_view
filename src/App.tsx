@@ -1,9 +1,13 @@
 import React from 'react';
-import './App.css';
+import classes from "./scss/App.module.scss";
 
-function App() {
+interface AppProps {
+
+}
+
+const App: React.FC<AppProps> = () => {
   return (
-    <div className="App">
+    <div className={classes.App}>
     </div>
   );
 }
