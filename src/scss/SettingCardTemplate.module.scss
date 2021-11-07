@@ -1,0 +1,17 @@
+.card {
+  width: 450px;
+  height: 140px;
+  margin-left: 30px;
+  padding: 20px 40px;
+
+  border-radius: 30px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-color: #FFFFFF;
+
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
