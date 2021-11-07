@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  .header__counter {
+    display: flex;
+    .counter {
+      border: 1px solid black;
+      border-radius: 10px;
+      display: flex;
+      height: 32px;
+      width: 60px;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 25px;
+      margin: 0 10px 0 20px;
+    }
+  }
+}
