@@ -1,0 +1,17 @@
+.button {
+  background-color: #FDD207;
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 12px;
+  position: relative;
+  .horizontalRect {
+    position: absolute;
+    height: 6px;
+    width: 28px;
+    background-color: black;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+}
