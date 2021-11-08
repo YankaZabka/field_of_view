@@ -1,11 +1,7 @@
 import React from 'react';
 import classes from "../../scss/TextPage.module.scss"
 
-interface TextPageProps {
-
-}
-
-const TextPage: React.FC<TextPageProps> = () => {
+const TextPage = () => {
     return (
         <div className={classes.page}>
             <div className={classes.leftPart}>разв</div>

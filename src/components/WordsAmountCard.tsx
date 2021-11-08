@@ -4,11 +4,7 @@ import Slider from "./UI/Slider";
 import CardTitle from "./CardTitle";
 import CardOptions from "./CardOptions";
 
-interface WordsAmountCardProps {
-
-}
-
-const WordsAmountCard: React.FC<WordsAmountCardProps> = () => {
+const WordsAmountCard = () => {
     return (
         <SettingCardTemplate>
             <CardTitle text={"Сколько слов"}/>

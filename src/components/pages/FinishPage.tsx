@@ -1,11 +1,7 @@
 import React from 'react';
 import classes from "../../scss/FinishPage.module.scss"
 
-interface FinishPageProps {
-
-}
-
-const FinishPage: React.FC<FinishPageProps> = () => {
+const FinishPage = () => {
     return (
         <div className={classes.page}>
             <div className={classes.image}/>

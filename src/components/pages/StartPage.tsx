@@ -4,11 +4,7 @@ import WordsAmountCard from "../WordsAmountCard";
 import SpeedCard from "../SpeedCard";
 import StartCard from "../StartCard";
 
-interface StartPageProps {
-
-}
-
-const StartPage: React.FC<StartPageProps> = () => {
+const StartPage = () => {
     return (
         <div className={classes.startPage}>
             <WordsAmountCard/>
