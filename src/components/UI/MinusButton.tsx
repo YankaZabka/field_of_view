@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../../scss/MinusButton.module.scss"
+import classes from "./MinusButton.module.scss"
 
 const MinusButton = () => {
     return (

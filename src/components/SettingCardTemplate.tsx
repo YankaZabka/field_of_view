@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../scss/SettingCardTemplate.module.scss"
+import classes from "./SettingCardTemplate.module.scss"
 
 interface SettingCardTemplateProps {
     children: object,
