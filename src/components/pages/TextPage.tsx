@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../../scss/TextPage.module.scss"
+import classes from "./TextPage.module.scss"
 
 const TextPage = () => {
     return (

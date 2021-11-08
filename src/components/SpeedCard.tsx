@@ -1,7 +1,7 @@
 import React from 'react';
 import SettingCardTemplate from "./SettingCardTemplate";
 import CardTitle from "./CardTitle";
-import classes from '../scss/SpeedCard.module.scss'
+import classes from './SpeedCard.module.scss'
 import MinusButton from "./UI/MinusButton";
 import PlusButton from "./UI/PlusButton";
 

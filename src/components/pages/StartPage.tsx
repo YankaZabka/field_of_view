@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../../scss/StartPage.module.scss"
+import classes from "./StartPage.module.scss"
 import WordsAmountCard from "../WordsAmountCard";
 import SpeedCard from "../SpeedCard";
 import StartCard from "../StartCard";

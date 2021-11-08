@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../scss/StartCard.module.scss"
+import classes from "./StartCard.module.scss"
 
 const StartCard = () => {
     return (

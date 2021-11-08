@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../scss/CardOptions.module.scss"
+import classes from "./CardOptions.module.scss"
 
 const CardOptions = () => {
     return (
