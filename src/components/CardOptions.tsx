@@ -1,10 +1,7 @@
 import React from 'react';
 import classes from "../scss/CardOptions.module.scss"
 
-interface CardOptionsProps {
-}
-
-const CardOptions: React.FC<CardOptionsProps> = () => {
+const CardOptions = () => {
     return (
         <div className={classes.options}>
             <div>1</div>

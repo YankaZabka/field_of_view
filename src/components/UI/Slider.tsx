@@ -1,11 +1,7 @@
 import React from 'react';
 import classes from "../../scss/Slider.module.scss";
 
-interface SliderProps {
-
-}
-
-const Slider: React.FC<SliderProps> = () => {
+const Slider = () => {
     return (
         <div className={classes.sliderContainer}>
             <input

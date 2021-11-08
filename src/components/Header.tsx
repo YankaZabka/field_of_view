@@ -1,11 +1,7 @@
 import React from 'react';
 import classes from "../scss/Header.module.scss";
 
-interface HeaderProps {
-
-}
-
-const Header: React.FC<HeaderProps> = () => {
+const Header = () => {
     return (
         <div className={classes.header}>
             <div className={classes.header__container}>

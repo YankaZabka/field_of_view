@@ -1,10 +1,7 @@
 import React from 'react';
 import classes from "../../scss/PlusButton.module.scss"
 
-interface PlusButtonProps {
-}
-
-const PlusButton: React.FC<PlusButtonProps> = () => {
+const PlusButton = () => {
     return (
         <button className={classes.button}>
             <div className={classes.horizontalRect}/>

@@ -5,11 +5,7 @@ import classes from '../scss/SpeedCard.module.scss'
 import MinusButton from "./UI/MinusButton";
 import PlusButton from "./UI/PlusButton";
 
-interface SpeedCardProps {
-    
-}
-
-const SpeedCard: React.FC<SpeedCardProps> = () => {
+const SpeedCard = () => {
     return (
         <SettingCardTemplate>
             <div className={classes.header}>
