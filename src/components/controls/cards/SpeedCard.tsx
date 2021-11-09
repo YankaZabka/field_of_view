@@ -1,9 +1,9 @@
 import React from 'react';
-import SettingCardTemplate from "./SettingCardTemplate";
-import CardTitle from "./CardTitle";
+import SettingCardTemplate from "../SettingCardTemplate";
+import CardTitle from "../CardTitle";
 import classes from './SpeedCard.module.scss'
-import MinusButton from "./UI/MinusButton";
-import PlusButton from "./UI/PlusButton";
+import MinusButton from "../../generic/MinusButton";
+import PlusButton from "../../generic/PlusButton";
 
 const SpeedCard = () => {
     return (
