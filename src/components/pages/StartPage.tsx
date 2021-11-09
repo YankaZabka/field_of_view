@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from "./StartPage.module.scss"
-import WordsAmountCard from "../WordsAmountCard";
-import SpeedCard from "../SpeedCard";
-import StartCard from "../StartCard";
+import WordsAmountCard from "../controls/cards/WordsAmountCard";
+import SpeedCard from "../controls/cards/SpeedCard";
+import StartCard from "../controls/cards/StartCard";
 
 const StartPage = () => {
     return (
