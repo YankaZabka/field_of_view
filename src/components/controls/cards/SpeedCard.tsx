@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import SettingCardTemplate from "../SettingCardTemplate";
 import CardTitle from "../CardTitle";
 import classes from './SpeedCard.module.scss'
-import MinusButton from "../../generic/MinusButton";
-import PlusButton from "../../generic/PlusButton";
+import MinusButton from "../../shared/MinusButton";
+import PlusButton from "../../shared/PlusButton";
 
 interface SpeedCardProps {
     handleSpeed(value: number): void
