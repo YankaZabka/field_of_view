@@ -1,19 +1,38 @@
 import React from 'react';
 import classes from "./CardOptions.module.scss"
+import {nanoid} from "nanoid"
 
-const CardOptions = () => {
+interface CardOptionsProps {
+    options: number[]
+    current: number
+}
+
+const CardOptions = ({options, current}: CardOptionsProps) => {
+
+    const multiplier = options.length === 10 ? 10 : 12.5
+
+    const getSelected = (number: number, index: number, current: number): string => {
+        const styles = []
+        if (number < 10) styles.push(classes.oneDigit)
+        if (current < (index + 1) * multiplier && current >= index * multiplier) {
+            styles.push(classes.selected)
+        }
+
+        return styles.join(' ')
+    }
+
     return (
         <div className={classes.options}>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
+            {options.map((number, index) => {
+                const styles = getSelected(number, index, current)
+
+                return <div
+                    key={nanoid()}
+                    className={styles}
+                >
+                    {number}
+                </div>
+            })}
         </div>
     );
 };
