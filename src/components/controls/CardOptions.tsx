@@ -5,9 +5,11 @@ import {nanoid} from "nanoid"
 interface CardOptionsProps {
     options: number[]
     current: number
+
+    getSelectedOption(value: number): void
 }
 
-const CardOptions = ({options, current}: CardOptionsProps) => {
+const CardOptions = ({getSelectedOption, options, current}: CardOptionsProps) => {
 
     const multiplier = options.length === 10 ? 10 : 12.5
 
@@ -16,6 +18,7 @@ const CardOptions = ({options, current}: CardOptionsProps) => {
         if (number < 10) styles.push(classes.oneDigit)
         if (current < (index + 1) * multiplier && current >= index * multiplier) {
             styles.push(classes.selected)
+            getSelectedOption(number)
         }
 
         return styles.join(' ')

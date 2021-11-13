@@ -5,7 +5,11 @@ import classes from './SpeedCard.module.scss'
 import MinusButton from "../../generic/MinusButton";
 import PlusButton from "../../generic/PlusButton";
 
-const SpeedCard = () => {
+interface SpeedCardProps {
+    handleSpeed(value: number): void
+}
+
+const SpeedCard = ({handleSpeed}: SpeedCardProps) => {
     const [localSpeed, setLocalSpeed] = useState<number>(1)
 
     return (
@@ -23,9 +27,11 @@ const SpeedCard = () => {
                 <MinusButton onClick={() => {
                     if (localSpeed === 0) return
                     setLocalSpeed(prev => prev - 1)
+                    handleSpeed(localSpeed - 1)
                 }}/>
                 <PlusButton onClick={() => {
                     setLocalSpeed(prev => prev + 1)
+                    handleSpeed(localSpeed + 1)
                 }}/>
             </div>
         </SettingCardTemplate>
