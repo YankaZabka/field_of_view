@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import SettingCardTemplate from "../SettingCardTemplate";
-import Slider from "../../generic/Slider";
+import Slider from "../../shared/Slider";
 import CardTitle from "../CardTitle";
 import CardOptions from "../CardOptions";
 
