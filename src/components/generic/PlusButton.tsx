@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from "./PlusButton.module.scss"
 
-const PlusButton = () => {
+interface PlusButtonProps {
+    onClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const PlusButton = ({onClick}: PlusButtonProps) => {
     return (
-        <button className={classes.button}>
+        <button onClick={onClick} className={classes.button}>
             <div className={classes.horizontalRect}/>
             <div className={classes.verticalRect}/>
         </button>
