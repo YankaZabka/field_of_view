@@ -4,11 +4,19 @@ import Slider from "../../generic/Slider";
 import CardTitle from "../CardTitle";
 import CardOptions from "../CardOptions";
 
-const IncreasingDistanceCard = () => {
+interface IncreasingDistanceCardProps {
+    handleIncreasingDistance(value: number): void
+}
+
+const IncreasingDistanceCard = ({handleIncreasingDistance}: IncreasingDistanceCardProps) => {
     const [currentValue, setCurrentValue] = useState<number>(50)
 
     const handleChange = (value: number): void => {
         setCurrentValue(value)
+    }
+
+    const getSelectedOption = (value: number): void => {
+        handleIncreasingDistance(value)
     }
 
     return (
@@ -17,6 +25,7 @@ const IncreasingDistanceCard = () => {
             <CardOptions
                 options={[5, 10, 15, 20, 25, 30, 35, 40]}
                 current={currentValue}
+                getSelectedOption={getSelectedOption}
             />
             <Slider changeValue={handleChange}/>
         </SettingCardTemplate>
