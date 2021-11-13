@@ -33,7 +33,13 @@ const App = () => {
     return (
         <div className={classes.App}>
             <Header/>
-            <StartPage/>
+            <StartPage
+                handleSpeed={changeSpeed}
+                handleIncreasingDistance={changeIncreasingDistance}
+                handleLettersInWords={changeLettersInWords}
+                handleStartingDistance={changeStartingDistance}
+                handleNumberOfWords={changeNumberOfWords}
+            />
         </div>
     );
 }
