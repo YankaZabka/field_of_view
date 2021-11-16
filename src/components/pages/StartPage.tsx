@@ -2,7 +2,7 @@ import React from 'react';
 import classes from "./StartPage.module.scss"
 import WordsAmountCard from "../controls/WordsAmountCard";
 import SpeedCard from "../controls/SpeedCard";
-import StartCard from "../controls/StartCard";
+import StartButton from "../controls/StartButton";
 import StartDistanceCard from "../controls/StartDistanceCard";
 import LettersAmountCard from "../controls/LettersAmountCard";
 import IncreasingDistanceCard from "../controls/IncreasingDistanceCard";
@@ -28,7 +28,7 @@ const StartPage = ({handleSpeed, handleIncreasingDistance, handleNumberOfWords, 
             <LettersAmountCard handleLettersInWords={handleLettersInWords}/>
             <IncreasingDistanceCard handleIncreasingDistance={handleIncreasingDistance}/>
             <SpeedCard handleSpeed={handleSpeed}/>
-            <StartCard/>
+            <StartButton/>
         </div>
     );
 };
