@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SettingCardTemplate from "./shared/SettingCardTemplate";
 import Slider from "./shared/Slider";
 import CardTitle from "./shared/CardTitle";
@@ -9,13 +9,8 @@ interface LettersAmountCardProps {
 }
 
 const LettersAmountCard = ({handleLettersInWords}: LettersAmountCardProps) => {
-    const [currentValue, setCurrentValue] = useState<number>(50)
 
     const handleChange = (value: number): void => {
-        setCurrentValue(value)
-    }
-
-    const getSelectedOption = (value: number): void => {
         handleLettersInWords(value)
     }
 
@@ -24,10 +19,13 @@ const LettersAmountCard = ({handleLettersInWords}: LettersAmountCardProps) => {
             <CardTitle text={"Сколько букв в словах"}/>
             <CardOptions
                 options={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
-                current={currentValue}
-                getSelectedOption={getSelectedOption}
             />
-            <Slider changeValue={handleChange}/>
+            <Slider
+                min={3}
+                max={12}
+                step={1}
+                changeValue={handleChange}
+            />
         </SettingCardTemplate>
     );
 };

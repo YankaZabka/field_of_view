@@ -1,15 +1,11 @@
 .options {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   font-weight: 700;
   font-size: 25px;
-}
-
-.oneDigit {
-  width: 28.69px;
-  text-align: center;
-}
-.selected {
-  color: #FDD207;
+  .option {
+    width: 28.69px;
+    text-align: center;
+  }
 }
