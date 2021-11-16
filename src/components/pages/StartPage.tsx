@@ -8,10 +8,10 @@ import LettersAmountCard from "../controls/LettersAmountCard";
 import IncreasingDistanceCard from "../controls/IncreasingDistanceCard";
 
 const StartPage = () => {
-    const [numberOfWords, setNumberOfWords] = useState<number>(6)
-    const [startingDistance, setStartingDistance] = useState<number>(25)
-    const [lettersInWords, setLettersInWords] = useState<number>(8)
-    const [increasingDistance, setIncreasingDistance] = useState<number>(25)
+    const [numberOfWords, setNumberOfWords] = useState<number>()
+    const [startingDistance, setStartingDistance] = useState<number>()
+    const [lettersInWords, setLettersInWords] = useState<number>()
+    const [increasingDistance, setIncreasingDistance] = useState<number>()
     const [speed, setSpeed] = useState<number>(1)
 
     return (

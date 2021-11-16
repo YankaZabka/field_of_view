@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SettingCardTemplate from "./shared/SettingCardTemplate";
 import Slider from "./shared/Slider";
 import CardTitle from "./shared/CardTitle";
@@ -9,13 +9,8 @@ interface IncreasingDistanceCardProps {
 }
 
 const IncreasingDistanceCard = ({handleIncreasingDistance}: IncreasingDistanceCardProps) => {
-    const [currentValue, setCurrentValue] = useState<number>(50)
 
     const handleChange = (value: number): void => {
-        setCurrentValue(value)
-    }
-
-    const getSelectedOption = (value: number): void => {
         handleIncreasingDistance(value)
     }
 
@@ -24,10 +19,13 @@ const IncreasingDistanceCard = ({handleIncreasingDistance}: IncreasingDistanceCa
             <CardTitle text={"Увеличение расстояния"}/>
             <CardOptions
                 options={[5, 10, 15, 20, 25, 30, 35, 40]}
-                current={currentValue}
-                getSelectedOption={getSelectedOption}
             />
-            <Slider changeValue={handleChange}/>
+            <Slider
+                min={5}
+                max={40}
+                step={5}
+                changeValue={handleChange}
+            />
         </SettingCardTemplate>
     );
 };
