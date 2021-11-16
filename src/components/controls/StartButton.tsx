@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from "./StartCard.module.scss"
+import classes from "./StartButton.module.scss"
 
-const StartCard = () => {
+const StartButton = () => {
     return (
         <div className={classes.card}>
             <button className={classes.button}>СТАРТ</button>
@@ -9,4 +9,4 @@ const StartCard = () => {
     );
 };
 
-export default StartCard;
+export default StartButton;
