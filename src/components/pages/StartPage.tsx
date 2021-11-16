@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from "./StartPage.module.scss"
-import WordsAmountCard from "../controls/cards/WordsAmountCard";
-import SpeedCard from "../controls/cards/SpeedCard";
-import StartCard from "../controls/cards/StartCard";
-import StartDistanceCard from "../controls/cards/StartDistanceCard";
-import LettersAmountCard from "../controls/cards/LettersAmountCard";
-import IncreasingDistanceCard from "../controls/cards/IncreasingDistanceCard";
+import WordsAmountCard from "../controls/WordsAmountCard";
+import SpeedCard from "../controls/SpeedCard";
+import StartCard from "../controls/StartCard";
+import StartDistanceCard from "../controls/StartDistanceCard";
+import LettersAmountCard from "../controls/LettersAmountCard";
+import IncreasingDistanceCard from "../controls/IncreasingDistanceCard";
 
 interface StartPageProps {
 

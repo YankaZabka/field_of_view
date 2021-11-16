@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import SettingCardTemplate from "../SettingCardTemplate";
-import Slider from "../../shared/Slider";
-import CardTitle from "../CardTitle";
-import CardOptions from "../CardOptions";
+import SettingCardTemplate from "./shared/SettingCardTemplate";
+import Slider from "./shared/Slider";
+import CardTitle from "./shared/CardTitle";
+import CardOptions from "./shared/CardOptions";
 
 interface StartDistanceCardProps {
     handleStartingDistance(value: number): void
