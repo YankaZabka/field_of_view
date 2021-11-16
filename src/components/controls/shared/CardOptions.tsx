@@ -13,6 +13,8 @@ const CardOptions = ({getSelectedOption, options, current}: CardOptionsProps) =>
 
     const multiplier = options.length === 10 ? 10 : 12.5
 
+    console.log('CARD OPTIONS')
+
     const getSelected = (number: number, index: number, current: number): string => {
         const styles = []
         if (number < 10) styles.push(classes.oneDigit)
