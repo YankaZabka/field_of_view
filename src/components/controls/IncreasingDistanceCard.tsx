@@ -5,10 +5,11 @@ import CardTitle from "./shared/CardTitle";
 import CardOptions from "./shared/CardOptions";
 
 interface IncreasingDistanceCardProps {
+    value: number
     handleIncreasingDistance(value: number): void
 }
 
-const IncreasingDistanceCard = ({handleIncreasingDistance}: IncreasingDistanceCardProps) => {
+const IncreasingDistanceCard = ({handleIncreasingDistance, value}: IncreasingDistanceCardProps) => {
 
     const handleChange = (value: number): void => {
         handleIncreasingDistance(value)
@@ -23,6 +24,7 @@ const IncreasingDistanceCard = ({handleIncreasingDistance}: IncreasingDistanceCa
             <Slider
                 min={5}
                 max={40}
+                value={value}
                 step={5}
                 changeValue={handleChange}
             />

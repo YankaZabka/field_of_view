@@ -5,10 +5,11 @@ import CardTitle from "./shared/CardTitle";
 import CardOptions from "./shared/CardOptions";
 
 interface WordsAmountCardProps {
+    value: number
     handleNumberOfWords(value: number): void
 }
 
-const WordsAmountCard = ({handleNumberOfWords}: WordsAmountCardProps) => {
+const WordsAmountCard = ({handleNumberOfWords, value}: WordsAmountCardProps) => {
 
     const handleChange = (value: number): void => {
         handleNumberOfWords(value)
@@ -23,6 +24,7 @@ const WordsAmountCard = ({handleNumberOfWords}: WordsAmountCardProps) => {
             <Slider
                 min={1}
                 max={10}
+                value={value}
                 step={1}
                 changeValue={handleChange}
             />

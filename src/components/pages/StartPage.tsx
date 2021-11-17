@@ -16,11 +16,11 @@ const StartPage = () => {
 
     return (
         <div className={classes.startPage}>
-            <WordsAmountCard handleNumberOfWords={value => setNumberOfWords(value)}/>
-            <StartDistanceCard handleStartingDistance={value => setStartingDistance(value)}/>
-            <LettersAmountCard handleLettersInWords={value => setLettersInWords(value)}/>
-            <IncreasingDistanceCard handleIncreasingDistance={value => setIncreasingDistance(value)}/>
-            <SpeedCard handleSpeed={value => setSpeed(value)}/>
+            <WordsAmountCard value={numberOfWords} handleNumberOfWords={value => setNumberOfWords(value)}/>
+            <StartDistanceCard value={startingDistance} handleStartingDistance={value => setStartingDistance(value)}/>
+            <LettersAmountCard value={lettersInWords} handleLettersInWords={value => setLettersInWords(value)}/>
+            <IncreasingDistanceCard value={increasingDistance} handleIncreasingDistance={value => setIncreasingDistance(value)}/>
+            <SpeedCard value={speed} handleSpeed={value => setSpeed(value)}/>
             <StartButton/>
         </div>
     );
