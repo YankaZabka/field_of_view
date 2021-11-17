@@ -5,10 +5,11 @@ import CardTitle from "./shared/CardTitle";
 import CardOptions from "./shared/CardOptions";
 
 interface LettersAmountCardProps {
+    value: number
     handleLettersInWords(value: number): void
 }
 
-const LettersAmountCard = ({handleLettersInWords}: LettersAmountCardProps) => {
+const LettersAmountCard = ({handleLettersInWords, value}: LettersAmountCardProps) => {
 
     const handleChange = (value: number): void => {
         handleLettersInWords(value)
@@ -23,6 +24,7 @@ const LettersAmountCard = ({handleLettersInWords}: LettersAmountCardProps) => {
             <Slider
                 min={3}
                 max={12}
+                value={value}
                 step={1}
                 changeValue={handleChange}
             />

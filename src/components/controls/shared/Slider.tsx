@@ -5,10 +5,11 @@ interface SliderProps {
     min: number
     max: number
     step: number
+    value: number
     changeValue(value: number): void
 }
 
-const Slider = ({min, max, step, changeValue}: SliderProps) => {
+const Slider = ({min, max, step, changeValue, value}: SliderProps) => {
 
     return (
         <div className={classes.sliderContainer}>
@@ -17,6 +18,7 @@ const Slider = ({min, max, step, changeValue}: SliderProps) => {
                 min={min}
                 max={max}
                 step={step}
+                value={value}
                 className={classes.slider}
                 onChange={(e) => {
                     changeValue(Number(e.target.value))

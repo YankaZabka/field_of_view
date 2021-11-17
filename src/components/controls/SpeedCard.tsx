@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SettingCardTemplate from "./shared/SettingCardTemplate";
 import CardTitle from "./shared/CardTitle";
 import classes from './SpeedCard.module.scss'
@@ -6,11 +6,11 @@ import MinusButton from "./shared/MinusButton";
 import PlusButton from "./shared/PlusButton";
 
 interface SpeedCardProps {
+    value: number
     handleSpeed(value: number): void
 }
 
-const SpeedCard = ({handleSpeed}: SpeedCardProps) => {
-    const [localSpeed, setLocalSpeed] = useState<number>(1)
+const SpeedCard = ({value, handleSpeed}: SpeedCardProps) => {
 
     return (
         <SettingCardTemplate>
@@ -18,20 +18,18 @@ const SpeedCard = ({handleSpeed}: SpeedCardProps) => {
                 <CardTitle text={"Скорость"}/>
                 <div className={classes.header__counter}>
                     <div className={classes.counter}>
-                        {localSpeed}
+                        {value}
                     </div>
                     <CardTitle text={"сек."}/>
                 </div>
             </div>
             <div>
                 <MinusButton onClick={() => {
-                    if (localSpeed === 0) return
-                    setLocalSpeed(prev => prev - 1)
-                    handleSpeed(localSpeed - 1)
+                    if (value === 0) return
+                    handleSpeed(value - 1)
                 }}/>
                 <PlusButton onClick={() => {
-                    setLocalSpeed(prev => prev + 1)
-                    handleSpeed(localSpeed + 1)
+                    handleSpeed(value + 1)
                 }}/>
             </div>
         </SettingCardTemplate>
