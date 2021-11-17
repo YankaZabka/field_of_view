@@ -23,9 +23,6 @@ const Slider = ({min, max, step, changeValue, value}: SliderProps) => {
                 onChange={(e) => {
                     changeValue(Number(e.target.value))
                 }}
-                onClick={(e) => {
-                    changeValue(Number((e.target as HTMLInputElement).value))
-                }}
             />
         </div>
     );
