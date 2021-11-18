@@ -18,7 +18,7 @@ const App = () => {
 
     return (
         <div className={classes.App}>
-            <Header/>
+            <Header isTitle={currentPage === 1}/>
             {currentPage === 1
                 ? <StartPage
                     handleOptions={value => setOptions(value)}
