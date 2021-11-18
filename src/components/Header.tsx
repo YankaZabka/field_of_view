@@ -2,7 +2,7 @@ import React from 'react';
 import classes from "./Header.module.scss";
 
 interface HeaderProps {
-    isTitle: any
+    isTitle: boolean
 }
 
 const Header = ({isTitle}: HeaderProps) => {
