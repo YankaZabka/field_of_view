@@ -7,13 +7,7 @@ import TextPage from "./components/pages/TextPage";
 import FinishPage from "./components/pages/FinishPage";
 
 const App = () => {
-    const [options, setOptions] = useState<IOptions>({
-        numberOfWords: 5,
-        startingDistance: 20,
-        lettersInWords: 7,
-        increasingDistance: 20,
-        speed: 1,
-    })
+    const [options, setOptions] = useState<IOptions | null>()
     const [currentPage, setCurrentPage] = useState(1)
 
     return (
