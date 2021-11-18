@@ -6,19 +6,23 @@ import {IOptions} from "./interfaces/options";
 import TextPage from "./components/pages/TextPage";
 import FinishPage from "./components/pages/FinishPage";
 
+enum Step {Settings, Game, End}
+
 const App = () => {
     const [options, setOptions] = useState<IOptions | null>()
-    const [currentPage, setCurrentPage] = useState(1)
+    const [step, setStep] = useState<Step>(Step.Settings)
 
     return (
         <div className={classes.App}>
-            <Header isTitle={currentPage === 1}/>
-            {currentPage === 1
+            <Header isTitle={step === 0}/>
+            {step === 0
                 ? <StartPage
-                    handleOptions={value => setOptions(value)}
-                    handlePage={() => setCurrentPage(prev => prev + 1)}
+                    onStart={options => {
+                        setOptions(options)
+                        setStep(Step.Game)
+                    }}
                 />
-                : currentPage === 2
+                : step === 1
                     ? <TextPage/>
                     : <FinishPage/>
             }
