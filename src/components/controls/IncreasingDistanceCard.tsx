@@ -6,13 +6,13 @@ import CardOptions from "./shared/CardOptions";
 
 interface IncreasingDistanceCardProps {
     value: number
-    handleIncreasingDistance(value: number): void
+    onChange(value: number): void
 }
 
-const IncreasingDistanceCard = ({handleIncreasingDistance, value}: IncreasingDistanceCardProps) => {
+const IncreasingDistanceCard = ({onChange, value}: IncreasingDistanceCardProps) => {
 
     const handleChange = (value: number): void => {
-        handleIncreasingDistance(value)
+        onChange(value)
     }
 
     return (

@@ -2,13 +2,13 @@ import React from 'react';
 import classes from "./StartButton.module.scss"
 
 interface StartButtonProps {
-    handleClick(): void
+    onStart(): void
 }
 
-const StartButton = ({handleClick}: StartButtonProps) => {
+const StartButton = ({onStart}: StartButtonProps) => {
     return (
         <div className={classes.card}>
-            <button onClick={handleClick} className={classes.button}>СТАРТ</button>
+            <button onClick={onStart} className={classes.button}>СТАРТ</button>
         </div>
     );
 };

@@ -7,10 +7,10 @@ import PlusButton from "./shared/PlusButton";
 
 interface SpeedCardProps {
     value: number
-    handleSpeed(value: number): void
+    onChange(value: number): void
 }
 
-const SpeedCard = ({value, handleSpeed}: SpeedCardProps) => {
+const SpeedCard = ({value, onChange}: SpeedCardProps) => {
 
     return (
         <SettingCardTemplate>
@@ -26,10 +26,10 @@ const SpeedCard = ({value, handleSpeed}: SpeedCardProps) => {
             <div>
                 <MinusButton onClick={() => {
                     if (value === 0) return
-                    handleSpeed(value - 1)
+                    onChange(value - 1)
                 }}/>
                 <PlusButton onClick={() => {
-                    handleSpeed(value + 1)
+                    onChange(value + 1)
                 }}/>
             </div>
         </SettingCardTemplate>

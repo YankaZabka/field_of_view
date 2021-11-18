@@ -21,12 +21,12 @@ const StartPage = ({onStart}: StartPageProps) => {
 
     return (
         <div className={classes.startPage}>
-            <WordsAmountCard value={numberOfWords} handleNumberOfWords={value => setNumberOfWords(value)}/>
-            <StartDistanceCard value={startingDistance} handleStartingDistance={value => setStartingDistance(value)}/>
-            <LettersAmountCard value={lettersInWords} handleLettersInWords={value => setLettersInWords(value)}/>
-            <IncreasingDistanceCard value={increasingDistance} handleIncreasingDistance={value => setIncreasingDistance(value)}/>
-            <SpeedCard value={speed} handleSpeed={value => setSpeed(value)}/>
-            <StartButton handleClick={() => {
+            <WordsAmountCard value={numberOfWords} onChange={value => setNumberOfWords(value)}/>
+            <StartDistanceCard value={startingDistance} onChange={value => setStartingDistance(value)}/>
+            <LettersAmountCard value={lettersInWords} onChange={value => setLettersInWords(value)}/>
+            <IncreasingDistanceCard value={increasingDistance} onChange={value => setIncreasingDistance(value)}/>
+            <SpeedCard value={speed} onChange={value => setSpeed(value)}/>
+            <StartButton onStart={() => {
                 onStart({numberOfWords, startingDistance, lettersInWords, increasingDistance, speed})
             }}/>
         </div>
