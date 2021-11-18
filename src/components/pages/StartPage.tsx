@@ -6,12 +6,18 @@ import StartButton from "../controls/StartButton";
 import StartDistanceCard from "../controls/StartDistanceCard";
 import LettersAmountCard from "../controls/LettersAmountCard";
 import IncreasingDistanceCard from "../controls/IncreasingDistanceCard";
+import {IOptions} from "../../interfaces/options";
 
-const StartPage = () => {
-    const [numberOfWords, setNumberOfWords] = useState(10)
-    const [startingDistance, setStartingDistance] = useState(40)
-    const [lettersInWords, setLettersInWords] = useState(12)
-    const [increasingDistance, setIncreasingDistance] = useState(40)
+interface StartPageProps {
+    handleOptions(value: IOptions): void
+    handlePage(): void
+}
+
+const StartPage = ({handleOptions, handlePage}: StartPageProps) => {
+    const [numberOfWords, setNumberOfWords] = useState(5)
+    const [startingDistance, setStartingDistance] = useState(20)
+    const [lettersInWords, setLettersInWords] = useState(7)
+    const [increasingDistance, setIncreasingDistance] = useState(20)
     const [speed, setSpeed] = useState(1)
 
     return (
@@ -21,7 +27,10 @@ const StartPage = () => {
             <LettersAmountCard value={lettersInWords} handleLettersInWords={value => setLettersInWords(value)}/>
             <IncreasingDistanceCard value={increasingDistance} handleIncreasingDistance={value => setIncreasingDistance(value)}/>
             <SpeedCard value={speed} handleSpeed={value => setSpeed(value)}/>
-            <StartButton/>
+            <StartButton handleClick={() => {
+                handleOptions({numberOfWords, startingDistance, lettersInWords, increasingDistance, speed})
+                handlePage()
+            }}/>
         </div>
     );
 };
