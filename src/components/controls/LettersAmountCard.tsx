@@ -6,13 +6,13 @@ import CardOptions from "./shared/CardOptions";
 
 interface LettersAmountCardProps {
     value: number
-    handleLettersInWords(value: number): void
+    onChange(value: number): void
 }
 
-const LettersAmountCard = ({handleLettersInWords, value}: LettersAmountCardProps) => {
+const LettersAmountCard = ({onChange, value}: LettersAmountCardProps) => {
 
     const handleChange = (value: number): void => {
-        handleLettersInWords(value)
+        onChange(value)
     }
 
     return (
