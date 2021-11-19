@@ -14,15 +14,15 @@ const App = () => {
 
     return (
         <div className={classes.App}>
-            <Header isTitle={step === 0}/>
-            {step === 0
+            <Header isTitle={step === Step.Settings}/>
+            {step === Step.Settings
                 ? <StartPage
                     onStart={options => {
                         setOptions(options)
                         setStep(Step.Game)
                     }}
                 />
-                : step === 1
+                : step === Step.Game
                     ? <TextPage/>
                     : <FinishPage/>
             }
