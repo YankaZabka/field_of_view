@@ -9,7 +9,7 @@ import FinishPage from "./components/pages/FinishPage";
 enum Step {Settings, Game, End}
 
 const App = () => {
-    const [options, setOptions] = useState<IOptions | null>()
+    const [options, setOptions] = useState<IOptions | undefined>()
     const [step, setStep] = useState<Step>(Step.Settings)
 
     return (
@@ -23,7 +23,10 @@ const App = () => {
                     }}
                 />
                 : step === Step.Game
-                    ? <TextPage/>
+                    ? <TextPage
+                        options={options}
+                        onEnd={() => setStep(Step.End)}
+                    />
                     : <FinishPage/>
             }
         </div>
