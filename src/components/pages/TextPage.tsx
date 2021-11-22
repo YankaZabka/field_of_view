@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import classes from "./TextPage.module.scss"
 import {IOptions} from "../../interfaces/options";
 import {library} from "../../data/library/library";
+import {sampleSize} from "lodash";
 
 interface TextPageProps {
     options: IOptions | undefined
@@ -9,10 +10,8 @@ interface TextPageProps {
     onEnd(): void
 }
 
-const _ = require("lodash")
-
 const TextPage = ({options, onEnd}: TextPageProps) => {
-    const [words] = useState(_.sampleSize(library.filter(word => word.length === options?.lettersInWords), options?.numberOfWords))
+    const [words] = useState(sampleSize(library.filter(word => word.length === options?.lettersInWords), options?.numberOfWords))
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
     const [separatingIndex, setSeparatingIndex] = useState<number>()
     const [distance, setDistance] = useState(options!.startingDistance)
