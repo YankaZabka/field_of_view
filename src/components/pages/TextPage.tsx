@@ -1,7 +1,13 @@
 import React from 'react';
 import classes from "./TextPage.module.scss"
+import {IOptions} from "../../interfaces/options";
 
-const TextPage = () => {
+interface TextPageProps {
+    options: IOptions | undefined
+    onEnd(): void
+}
+
+const TextPage = ({options, onEnd}: TextPageProps) => {
     return (
         <div className={classes.page}>
             <div className={classes.leftPart}>разв</div>
