@@ -16,21 +16,9 @@ const TextPage = ({options, onEnd}: TextPageProps) => {
     const [separatingIndex, setSeparatingIndex] = useState<number>()
     const [distance, setDistance] = useState(options.startingDistance)
 
-    function getIndex(str: string): number {
-
-        if (str.length % 2 === 0) {
-            return str.length / 2
-        } else if (Math.random() < 0.5) {
-            return Math.floor(str.length / 2)
-        } else {
-            return Math.ceil(str.length / 2)
-        }
-
-    }
-
     useEffect(() => {
         if (currentWordIndex === 0) {
-            setSeparatingIndex(getIndex(words[currentWordIndex]))
+            setSeparatingIndex(getSeparateIndex(words[currentWordIndex]))
         }
 
         setTimeout(() => {
@@ -38,7 +26,7 @@ const TextPage = ({options, onEnd}: TextPageProps) => {
             if (currentWordIndex === words.length - 1) {
                 onEnd()
             } else {
-                setSeparatingIndex(getIndex(words[currentWordIndex]))
+                setSeparatingIndex(getSeparateIndex(words[currentWordIndex]))
                 setDistance(prev => prev + options.increasingDistance)
                 setCurrentWordIndex(prev => prev + 1)
             }
@@ -70,3 +58,15 @@ const TextPage = ({options, onEnd}: TextPageProps) => {
 };
 
 export default TextPage;
+
+function getSeparateIndex(str: string): number {
+
+    if (str.length % 2 === 0) {
+        return str.length / 2
+    } else if (Math.random() < 0.5) {
+        return Math.floor(str.length / 2)
+    } else {
+        return Math.ceil(str.length / 2)
+    }
+
+}
