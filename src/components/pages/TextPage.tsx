@@ -5,16 +5,16 @@ import {library} from "../../data/library/library";
 import {sampleSize} from "lodash";
 
 interface TextPageProps {
-    options: IOptions | undefined
+    options: IOptions
 
     onEnd(): void
 }
 
 const TextPage = ({options, onEnd}: TextPageProps) => {
-    const [words] = useState(sampleSize(library.filter(word => word.length === options?.lettersInWords), options?.numberOfWords))
+    const [words] = useState(sampleSize(library.filter(word => word.length === options.lettersInWords), options.numberOfWords))
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
     const [separatingIndex, setSeparatingIndex] = useState<number>()
-    const [distance, setDistance] = useState(options!.startingDistance)
+    const [distance, setDistance] = useState(options.startingDistance)
 
     function getIndex(str: string): number {
 
@@ -39,10 +39,10 @@ const TextPage = ({options, onEnd}: TextPageProps) => {
                 onEnd()
             } else {
                 setSeparatingIndex(getIndex(words[currentWordIndex]))
-                setDistance(prev => prev + options!.increasingDistance)
+                setDistance(prev => prev + options.increasingDistance)
                 setCurrentWordIndex(prev => prev + 1)
             }
-        }, options!.speed * 1000)
+        }, options.speed * 1000)
     }, [currentWordIndex])
 
     return (

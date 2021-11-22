@@ -22,7 +22,7 @@ const App = () => {
                         setStep(Step.Game)
                     }}
                 />
-                : step === Step.Game
+                : step === Step.Game && options
                     ? <TextPage
                         options={options}
                         onEnd={() => setStep(Step.End)}
