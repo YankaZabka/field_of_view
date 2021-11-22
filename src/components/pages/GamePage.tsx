@@ -10,6 +10,8 @@ interface TextPageProps {
     onEnd(): void
 }
 
+const TILDA_SIZE = 60
+
 const GamePage = ({options, onEnd}: TextPageProps) => {
     const [words] = useState(sampleSize(library.filter(word => word.length === options.lettersInWords), options.numberOfWords))
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
@@ -38,7 +40,7 @@ const GamePage = ({options, onEnd}: TextPageProps) => {
         <div className={classes.page}>
             <div
                 className={classes.leftPart}
-                style={{marginRight: distance}}
+                style={{right: `calc(50% + ${TILDA_SIZE / 2}px + ${distance}px)`}}
             >
                 {
                     words[currentWordIndex].slice(0, separatingIndex)
@@ -47,7 +49,7 @@ const GamePage = ({options, onEnd}: TextPageProps) => {
             <div className={classes.tilde}/>
             <div
                 className={classes.rightPart}
-                style={{marginLeft: distance}}
+                style={{left: `calc(50% + ${TILDA_SIZE / 2}px + ${distance}px)`}}
             >
                 {
                     words[currentWordIndex].slice(separatingIndex)
