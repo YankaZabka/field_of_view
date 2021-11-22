@@ -3,7 +3,7 @@ import classes from "./App.module.scss";
 import Header from "./components/Header";
 import StartPage from "./components/pages/StartPage";
 import {IOptions} from "./interfaces/options";
-import TextPage from "./components/pages/TextPage";
+import GamePage from "./components/pages/GamePage";
 import FinishPage from "./components/pages/FinishPage";
 
 enum Step {Settings, Game, End}
@@ -23,7 +23,7 @@ const App = () => {
                     }}
                 />
                 : step === Step.Game && options
-                    ? <TextPage
+                    ? <GamePage
                         options={options}
                         onEnd={() => setStep(Step.End)}
                     />
