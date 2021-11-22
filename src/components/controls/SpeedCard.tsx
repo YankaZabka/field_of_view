@@ -25,11 +25,12 @@ const SpeedCard = ({value, onChange}: SpeedCardProps) => {
             </div>
             <div>
                 <MinusButton onClick={() => {
-                    if (value === 0) return
-                    onChange(value - 1)
+                    if (value === 1) return
+                    onChange(value - 0.5)
                 }}/>
                 <PlusButton onClick={() => {
-                    onChange(value + 1)
+                    if (value === 5) return
+                    onChange(value + 0.5)
                 }}/>
             </div>
         </SettingCardTemplate>
