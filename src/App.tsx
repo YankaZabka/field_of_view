@@ -8,6 +8,8 @@ import FinishPage from "./components/pages/FinishPage";
 
 enum Step {Settings, Game, End}
 
+const REFRESH_TIME = 3000
+
 const App = () => {
     const [options, setOptions] = useState<IOptions | undefined>()
     const [step, setStep] = useState<Step>(Step.Settings)
@@ -27,7 +29,10 @@ const App = () => {
                         options={options}
                         onEnd={() => setStep(Step.End)}
                     />
-                    : <FinishPage/>
+                    : <FinishPage
+                        onFinish={() => setStep(Step.Settings)}
+                        refreshTime={REFRESH_TIME}
+                    />
             }
         </div>
     );

@@ -1,7 +1,15 @@
 import React from 'react';
 import classes from "./FinishPage.module.scss"
 
-const FinishPage = () => {
+interface FinishPageProps {
+    refreshTime: number
+    onFinish(): void
+}
+
+const FinishPage = ({onFinish, refreshTime}: FinishPageProps) => {
+
+    setTimeout(() => onFinish(), refreshTime)
+
     return (
         <div className={classes.page}>
             <div className={classes.image}/>
