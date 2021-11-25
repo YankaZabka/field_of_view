@@ -27,12 +27,12 @@ const App = () => {
                 : step === Step.Game && options
                     ? <GamePage
                         options={options}
-                        onEnd={() => setStep(Step.End)}
+                        onEnd={() => {
+                            setStep(Step.End)
+                            setTimeout(() => setStep(Step.Settings), REFRESH_TIME)
+                        }}
                     />
-                    : <FinishPage
-                        onFinish={() => setStep(Step.Settings)}
-                        refreshTime={REFRESH_TIME}
-                    />
+                    : <FinishPage/>
             }
         </div>
     );
