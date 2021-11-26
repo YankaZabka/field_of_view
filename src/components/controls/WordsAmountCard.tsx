@@ -17,7 +17,7 @@ const WordsAmountCard = ({onChange, value}: WordsAmountCardProps) => {
 
     return (
         <SettingCardTemplate>
-            <CardTitle text={"Сколько слов"}/>
+            <CardTitle text={"number_of_words"}/>
             <CardOptions
                 options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
             />

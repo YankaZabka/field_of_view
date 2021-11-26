@@ -17,7 +17,7 @@ const IncreasingDistanceCard = ({onChange, value}: IncreasingDistanceCardProps) 
 
     return (
         <SettingCardTemplate>
-            <CardTitle text={"Увеличение расстояния"}/>
+            <CardTitle text={"increasing_distance"}/>
             <CardOptions
                 options={[5, 10, 15, 20, 25, 30, 35, 40]}
             />
