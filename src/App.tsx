@@ -18,12 +18,15 @@ const REFRESH_TIME = 3000
 const App = () => {
     const [options, setOptions] = useState<IOptions | undefined>()
     const [step, setStep] = useState<Step>(Step.Settings)
+    const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE)
 
     return (
-        <IntlProvider messages={messages[DEFAULT_LOCALE]} locale={DEFAULT_LOCALE} defaultLocale={LOCALE.RUSSIAN}>
+        <IntlProvider messages={messages[currentLocale]} locale={currentLocale} defaultLocale={LOCALE.RUSSIAN}>
             <div className={classes.App}>
                 <Header
                     isTitle={step === Step.Settings}
+                    currentLocale={currentLocale}
+                    onLocaleChange={(value) => setCurrentLocale(value)}
                 />
                 {step === Step.Settings
                     ? <StartPage
