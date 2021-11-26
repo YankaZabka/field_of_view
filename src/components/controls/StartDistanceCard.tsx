@@ -17,7 +17,7 @@ const StartDistanceCard = ({onChange, value}: StartDistanceCardProps) => {
 
     return (
         <SettingCardTemplate>
-            <CardTitle text={"Стартовое расстояние"}/>
+            <CardTitle text={"starting_distance"}/>
             <CardOptions
                 options={[5, 10, 15, 20, 25, 30, 35, 40]}
             />

@@ -4,6 +4,7 @@ import CardTitle from "./shared/CardTitle";
 import classes from './SpeedCard.module.scss'
 import MinusButton from "./shared/MinusButton";
 import PlusButton from "./shared/PlusButton";
+import {useIntl} from "react-intl"
 
 interface SpeedCardProps {
     value: number
@@ -12,15 +13,17 @@ interface SpeedCardProps {
 
 const SpeedCard = ({value, onChange}: SpeedCardProps) => {
 
+    const intl = useIntl()
+
     return (
         <SettingCardTemplate>
             <div className={classes.header}>
-                <CardTitle text={"Скорость"}/>
+                <CardTitle text={"speed"}/>
                 <div className={classes.header__counter}>
                     <div className={classes.counter}>
-                        {value}
+                        {intl.formatNumber(value)}
                     </div>
-                    <CardTitle text={"сек."}/>
+                    <CardTitle text={"speed_value"}/>
                 </div>
             </div>
             <div>
