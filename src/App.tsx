@@ -11,7 +11,7 @@ import {messages} from "./i18n/messages";
 
 enum Step {Settings, Game, End}
 
-const DEFAULT_LOCALE = LOCALE.ENGLISH
+const DEFAULT_LOCALE = LOCALE.RUSSIAN
 
 const REFRESH_TIME = 3000
 
