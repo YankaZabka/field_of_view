@@ -21,7 +21,7 @@ const App = () => {
     const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE)
 
     return (
-        <IntlProvider messages={messages[currentLocale]} locale={currentLocale} defaultLocale={LOCALE.RUSSIAN}>
+        <IntlProvider messages={messages[currentLocale]} locale={currentLocale} defaultLocale={DEFAULT_LOCALE}>
             <div className={classes.App}>
                 <Header
                     isTitle={step === Step.Settings}
