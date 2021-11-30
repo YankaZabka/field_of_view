@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is a single-page application for training peripheral vision.
+
+On the first page, you can choose game options, such as: **how many words** will appear during the action of the simulator, **how many letters** there will be in these words, what is the **starting distance**, how much the **distance increases** with each word. You can also choose the **speed** at which a new word will appear on the screen. 
+
+When you press the **start** button, a game will begin in which words will appear, divided in half (if the number of letters in a word is odd, it will be divided randomly). As the game progresses, the distance between the halves of the word will increase.
+At the end, the final page with congratulations will appear and refresh to the settings page. 
+
+On the first page you can **select the language** (RU / ENG)
+
 ## Available Scripts
 
 In the project directory, you can run:
