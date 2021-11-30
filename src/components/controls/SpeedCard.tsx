@@ -8,6 +8,7 @@ import {useIntl} from "react-intl"
 
 interface SpeedCardProps {
     value: number
+
     onChange(value: number): void
 }
 

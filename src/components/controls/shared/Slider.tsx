@@ -6,6 +6,7 @@ interface SliderProps {
     max: number
     step: number
     value: number
+
     changeValue(value: number): void
 }
 

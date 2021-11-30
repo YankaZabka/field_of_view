@@ -6,6 +6,7 @@ import CardOptions from "./shared/CardOptions";
 
 interface WordsAmountCardProps {
     value: number
+
     onChange(value: number): void
 }
 

@@ -1,10 +1,13 @@
 @import "src/components/controls/shared/MinusButton.module.scss";
 
 .verticalRect {
-    position: absolute;
-    height: 28px;
-    width: 6px;
-    background-color: black;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  height: 28px;
+  width: 6px;
+  background-color: black;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

@@ -1,5 +1,6 @@
 .sliderContainer {
   width: 100%;
+
   .slider {
     -webkit-appearance: none;
     appearance: none;
@@ -9,7 +10,8 @@
     outline: none;
     -webkit-transition: .2s;
     border-radius: 15px;
-    &::-webkit-slider-thumb{
+
+    &::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
       width: 10px;
@@ -19,6 +21,7 @@
       border-radius: 50%;
       cursor: pointer;
     }
+
     &::-moz-range-thumb {
       width: 15px;
       height: 15px;

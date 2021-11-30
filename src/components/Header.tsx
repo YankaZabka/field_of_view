@@ -6,6 +6,7 @@ import LanguageSelector from "./controls/shared/LanguageSelector";
 interface HeaderProps {
     isTitle: boolean
     currentLocale: string
+
     onLocaleChange(value: string): void
 }
 

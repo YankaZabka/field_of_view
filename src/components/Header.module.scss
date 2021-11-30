@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     .title {
       text-align: center;
       font-weight: 700;
@@ -16,9 +17,11 @@
       line-height: 56.54px;
       color: #2B3172;
     }
+
     .noneTitle {
       visibility: hidden;
     }
+
     .image {
       width: 200px;
       height: 80px;

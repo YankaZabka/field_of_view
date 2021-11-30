@@ -5,6 +5,7 @@ import {FormattedMessage} from "react-intl";
 
 interface LanguageSelectorProps {
     currentLocale: string
+
     onLocaleChange(value: string): void
 }
 
